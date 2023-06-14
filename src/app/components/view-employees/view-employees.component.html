@@ -1,0 +1,41 @@
+<ng-container *ngIf="employees$ | async as employees; else loading">
+  <div class="row mt-5">
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mt-3" *ngFor="let employee of employees">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">{{employee.first_name}} {{employee.last_name}}</h4>
+          <h6 class="card-subtitle mb-2 text-muted">{{employee.email}}</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #loading>
+
+  <div class="row mt-5">
+
+    <div class="col-4">
+      <ngx-skeleton-loader
+        count="2"
+        [theme]="{ 'border-radius': '0', height: '20px' }"
+      ></ngx-skeleton-loader>
+    </div>
+
+    <div class="col-4">
+      <ngx-skeleton-loader
+        count="2"
+        [theme]="{ 'border-radius': '0', height: '20px' }"
+      ></ngx-skeleton-loader>
+    </div>
+
+    <div class="col-4">
+      <ngx-skeleton-loader
+        count="2"
+        [theme]="{ 'border-radius': '0', height: '20px' }"
+      ></ngx-skeleton-loader>
+    </div>
+
+  </div>
+
+</ng-template>
