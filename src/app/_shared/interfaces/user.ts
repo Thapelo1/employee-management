@@ -27,3 +27,10 @@ export interface Company {
   catchPhrase: string
   bs: string
 }
+
+export interface Accounts {
+  accountName?: string  
+  accountNumber?: number
+  balance: number
+  allocatedAmount: undefined | null
+}

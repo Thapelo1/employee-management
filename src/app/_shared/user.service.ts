@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {User} from "./interfaces/user";
+import {Accounts, User} from "./interfaces/user";
 import {environment} from "../../environments/environment";
 import {Employee} from "./interfaces/employee";
 
@@ -33,5 +33,9 @@ export class UserService {
   addNewEmployee(employee: Employee): Observable<Employee>{
     return this.http.post<Employee>(`${this.localBaseUrl}/employees`, employee)
   }
+
+  getAccounts():Observable<Accounts[]>{
+    return this.http.get<Accounts[]>(`${this.localBaseUrl}/accounts`);
+  };
 
 }

@@ -1,0 +1,32 @@
+{
+  "accounts": [
+    {
+      "accountName": "Account A",
+      "accountNumber": "500001",
+      "balance": 5000,
+      "allocatedAmount": ""
+      
+    },
+    {
+      "accountName": "Account B",
+      "accountNumber": "500003",
+      "balance": 3000,
+      "allocatedAmount": ""
+      
+    },
+    {
+      "accountName": "Account C",
+      "accountNumber": "500003",
+      "balance": 4000,
+      "allocatedAmount": ""
+      
+    },
+    {
+      "accountName": "Account D",
+      "accountNumber": "500004",
+      "balance": 10000,
+      "allocatedAmount": ""
+      
+    }
+  ]
+}

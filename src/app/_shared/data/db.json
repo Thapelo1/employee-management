@@ -4,17 +4,12 @@
       "first_name": "Thapelo",
       "last_name": "Kekana",
       "email": "thapelo@angular.com",
-      "id": 4
+      "id": 1
     },
     {
       "first_name": "Relebohile Kekana",
-      "email": "relebohile.madumo@angular.com",
-      "id": 5
-    },
-    {
-      "first_name": "Lerato Kekana",
-      "email": "leratokekana@angular.com",
-      "id": 6
+      "email": "relebohile.madumo@gmail.com",
+      "id": 2
     }
   ]
 }

@@ -11,6 +11,7 @@ import { ViewEmployeesComponent } from './components/view-employees/view-employe
 import { HomeComponent } from './components/home/home.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { DetailEmployeesComponent } from './components/view-employees/detail-employees/detail-employees.component';
+import { AllocationComponent } from './components/allocation/allocation.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { DetailEmployeesComponent } from './components/view-employees/detail-emp
     AddEmployeeComponent,
     ViewEmployeesComponent,
     HomeComponent,
-    DetailEmployeesComponent
+    DetailEmployeesComponent,
+    AllocationComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,36 @@
+<h2>Cash Allocations</h2>
+
+<ng-container *ngIf="accounts$ | async as accounts">
+  <form [formGroup]="allocationsForm" (ngSubmit)="allocateFunds()">
+    <table class="table table-bordered mt-5">
+      <thead>
+        <tr>
+          <th scope="col">Account</th>
+          <th scope="col">Account Number</th>
+          <th scope="col">Available</th>
+          <th scope="col">Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr formArrayName="accounts" *ngFor="let group of formAccounts.controls ; let i=index">
+          <td scope="col">{{group.get('accountName')?.value}}</td>
+          <td scope="col">{{group.get('accountNumber')?.value}}</td>
+          <td scope="col">{{group.get('balance')?.value}}</td>
+          <td>
+            <div class="form-group" [formGroupName]="i">
+              <input type="number" class="form-control" placeholder="R" formControlName="allocationAmount">
+              <div *ngIf="group.get('allocationAmount')?.errors?.['max']" class="error-message">
+                Amount exceeds balance
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button type="button" class="btn btn-primary" [disabled]="allocationsForm.invalid" type="submit" (click)="submitForm()" >Submit</button>
+  </form>
+</ng-container>
+
+
+
+
